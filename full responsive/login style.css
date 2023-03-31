@@ -1,0 +1,156 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    min-height: 100vh;
+    background: linear-gradient(to right,#52a2c2,#b865b8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-card {
+    width: 450px;
+    background: rgba(255, 255, 255, .3);
+    padding: 4rem;
+    border-radius: 20px;
+    position: relative;
+}
+.login-card img{
+    width: 100px;
+}
+.login-card-logo,.login-card-header,.login-card-footer{
+    text-align: center;
+}
+.login-card a {
+    text-decoration: none;
+}
+.login-card:hover{
+    text-decoration: underline;
+}
+.login-card-header{
+    margin-bottom: 2rem;
+}
+.login-card-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.login-card-form.form-item-icon{
+    position: relative;
+}
+.login-card-form.form-item.form-item-icon{
+    position: absolute;
+    top: 82rem;
+    left: 1.4rem;
+    font-size: 1.3rem;
+    color: #747a81;
+}
+.login-card-form.form-item .label {
+    position: absolute;
+    left: 50px;
+    top:14px;
+    pointer-events: none;
+    font-size: 14px;
+    color: #747a81;
+    transition: .5s;
+}
+.login-card.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.login-card-form.form-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(1rem*.8);
+    margin-bottom: .5rem;
+}
+.login-card-footer{
+    margin-top: 1.5rem;
+    font-size: calc(1rem*.8);
+}
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    padding-left: calc(1rem*3.5);
+    border-radius:100px ;
+    width: 100%;
+}
+.login-card input[type="text"]:valid,
+.login-card input[type="password"]:valid,
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus {
+    background: whitesmoke;
+}
+.login-card input[type="text"]:valid~ .label,
+.login-card input[type="password"]:valid~ .label,
+.login-card input[type="text"]:focus~ .label,
+.login-card input[type="password"]:focus~ .label{
+    color: white;
+    transform: translate(10px,-10px);
+    font-size: .8em;
+    margin-left: -2rem;
+    top: -6px;
+}
+.login-card-form button{
+    background: linear-gradient(to right,darkblue,hsl(300, 42%, 9%));
+    border: none;
+    color: aliceblue;
+    padding: 1rem;
+    border-radius: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+.login-card-form bottom:hover {
+    background-color: rgba(0,0,0, .85);
+    cursor: pointer;
+}
+
+.login-card-social{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+.login-card-social > div {
+    opacity: .8;
+    letter-spacing: 1px;
+    font-size: calc(1rem*.8);
+}
+.login-card-social-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.login-card-social-btn a {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: antiquewhite;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    transition: all .5s;
+}
+.facebook-logo{
+    background: linear-gradient(to right,#002bff,rgba(25, 3, 76, 0.995));
+}
+.instagram-logo{
+    background: linear-gradient(to right,#833ab4,#fd1d1d9f);
+}
+.twitter-logo{
+    background: linear-gradient(to right,#2193b0,#6dd5ed);
+}
+.login-card-social-btn a:hover{
+    transform: scale(1.1);
+    opacity: .8;
+}
